@@ -1,0 +1,59 @@
+.main-navigation {
+  nav.navbar {
+    .navbar-brand {
+      img {
+        width: 70px;
+      }
+    }
+  }
+}
+
+.main-header {
+  @media #{$minMedium} {
+    height: 100vh;
+  }
+  font-family: $mainFont;
+  display: flex;
+  align-items: center;
+  .main-details {
+    @media #{$maxMobile} {
+      padding-top: 5rem;
+    }
+    h1 {
+      @media #{$maxMobile} {
+        font-size: 30px;
+      }
+      font-size: 53px;
+      letter-spacing: 2px;
+      font-weight: 600;
+      color: $mainColor;
+    }
+    p {
+      color: $mainColor;
+      opacity: 0.8;
+      font-size: 22px;
+      font-weight: 500;
+    }
+    .social-media-list {
+      margin-top: 2rem;
+      @media #{$maxMobile} {
+        margin-bottom: 1rem;
+      }
+      li {
+        display: inline-block;
+        :not(last-child) {
+          margin-right: 0.8rem;
+        }
+        a {
+          img {
+            width: 44px;
+            height: 44px;
+          }
+        }
+      }
+    }
+  }
+  .freelancer-brand {
+    margin-top: 3rem;
+  }
+}

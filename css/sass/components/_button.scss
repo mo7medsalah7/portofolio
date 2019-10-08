@@ -1,0 +1,19 @@
+.mainButton {
+  background: $secColor;
+  opacity: 0.66;
+  color: #fff;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  @include single-transition(all, 0.3s, ease-in-out);
+  cursor: pointer;
+  &:focus {
+    border: none;
+    outline: none;
+    transform: translate(-2px, -4px);
+  }
+}

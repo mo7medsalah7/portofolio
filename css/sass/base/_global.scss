@@ -1,0 +1,31 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $mainFont;
+
+  * {
+    box-sizing: inherit;
+  }
+}
+
+.heading {
+  h2 {
+    @media #{$maxMobile} {
+      font-size: 30px;
+      font-weight: 400;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    @media #{$minSmall} {
+      font-size: 37px;
+    }
+    @media #{$minMedium} {
+      font-size: 45px;
+    }
+    color: $mainColor;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+}

@@ -1,0 +1,407 @@
+/*!
+*   ___  ___ ___ ___   ___ _      ___   _____  ___   ___  _  __
+*  / __|/ __/ __/ __| | _ \ |    /_\ \ / / _ )/ _ \ / _ \| |/ /
+*  \__ \ (__\__ \__ \ |  _/ |__ / _ \ V /| _ \ (_) | (_) | ' < 
+*  |___/\___|___/___/ |_| |____/_/ \_\_| |___/\___/ \___/|_|\_\   *   
+*
+* # Scss Playbook 1.0.0
+* http://matthewelsom.com/blog/simple-scss-playbook.html
+*
+* Released under the CC0 1.0 Universal license
+* https://creativecommons.org/publicdomain/zero/1.0/
+*
+*
+* Files in assets/vendor/bourbon 
+* Bourbon 4.2.6
+* http://bourbon.io
+* Copyright 2011-2015 thoughtbot, inc.
+* MIT License
+*
+* Files in assets/vendor/neat
+* Neat 1.7.4
+* http://neat.bourbon.io
+* Copyright 2012-2015 thoughtbot, inc.
+* MIT License
+*
+* Files in assets/vendor/fontawesome 
+* Font Awesome 4.6.3 by @davegandy
+* http://fontawesome.io
+* MIT License
+*
+* Files in assets/vendor/normalize 
+* normalize.css v3.0.3
+* http://github.com/necolas/normalize.css
+* MIT License
+*/
+/*
+This file is used to contain all vendor imports.
+*/
+/*
+This file is used to contain all abstracts imports.
+Files inside this folder can contain abstract settings,
+helpers or functions. They have no direct output.
+*/
+/*
+This file is used to contain all base imports.
+Files inside this folder can contain global styles used in
+the project.
+*/
+/*
+This file can be used to overwrite any normailze settings.
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.card {
+  border-radius: 27px;
+  padding: 2rem 0;
+  -webkit-box-shadow: 2px 4px 15px 2px #d2c7c7;
+  -ms-box-shadow: 2px 4px 15px 2px #d2c7c7;
+  -o-box-shadow: 2px 4px 15px 2px #d2c7c7;
+  box-shadow: 2px 4px 15px 2px #d2c7c7;
+}
+
+.card .card-body .card-title {
+  color: #707070;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card .card-body .card-text {
+  color: #707070;
+  opacity: 0.8;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  padding-left: 12px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Montserrat !important;
+}
+
+html *,
+body * {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.heading h2 {
+  color: #707070;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 767px) {
+  .heading h2 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 768px) {
+  .heading h2 {
+    font-size: 37px;
+  }
+}
+
+@media (min-width: 992px) {
+  .heading h2 {
+    font-size: 45px;
+  }
+}
+
+html {
+  font-family: Montserrat !important, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/*
+This file is used to contain all component imports.
+Files inside this folder should contain all styles relating
+to a reusable component.
+*/
+.container {
+  max-width: 1280px;
+}
+
+.mainButton {
+  background: #6c63ff;
+  opacity: 0.66;
+  color: #fff;
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.mainButton:focus {
+  border: none;
+  outline: none;
+  -webkit-transform: translate(-2px, -4px);
+          transform: translate(-2px, -4px);
+}
+
+/*
+This file is used to contain all layout imports.
+Files inside this folder should contain all styles relating
+to layouts.
+*/
+.main-navigation nav.navbar .navbar-brand img {
+  width: 70px;
+}
+
+.main-header {
+  font-family: Montserrat !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 992px) {
+  .main-header {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-header .main-details {
+    padding-top: 5rem;
+  }
+}
+
+.main-header .main-details h1 {
+  font-size: 53px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #707070;
+}
+
+@media (max-width: 767px) {
+  .main-header .main-details h1 {
+    font-size: 30px;
+  }
+}
+
+.main-header .main-details p {
+  color: #707070;
+  opacity: 0.8;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.main-header .main-details .social-media-list {
+  margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+  .main-header .main-details .social-media-list {
+    margin-bottom: 1rem;
+  }
+}
+
+.main-header .main-details .social-media-list li {
+  display: inline-block;
+}
+
+.main-header .main-details .social-media-list li :not(last-child) {
+  margin-right: 0.8rem;
+}
+
+.main-header .main-details .social-media-list li a img {
+  width: 44px;
+  height: 44px;
+}
+
+.main-header .freelancer-brand {
+  margin-top: 3rem;
+}
+
+.skills .skills-package img {
+  padding: 50px 100px;
+}
+
+@media (max-width: 767px) {
+  .skills .skills-package img {
+    padding: 15px 40px;
+  }
+}
+
+.projects .technologies {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.projects .technologies li {
+  display: inline-block;
+}
+
+.projects .technologies li img {
+  width: 50px;
+  height: 50px;
+}
+
+.projects .technologies li :not(last-child) {
+  margin-right: 0.8rem;
+}
+
+.contact {
+  background: #dddddd8f;
+}
+
+@media (max-width: 767px) {
+  .contact .freelancer-brand {
+    margin-bottom: 4rem;
+  }
+}
+
+.contact .freelancer-brand img {
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .contact .freelancer-brand img {
+    height: 30vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact .freelancer-brand img {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact .freelancer-brand img {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact form {
+    text-align: center;
+  }
+}
+
+.contact form label {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-left: 2rem;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 80%;
+  border-radius: 14px;
+  outline: none;
+  border: 0.8px solid #707070;
+  padding: 0.5rem 0.9rem;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .mainButton {
+  width: 80% !important;
+}
+/*# sourceMappingURL=style.css.map */

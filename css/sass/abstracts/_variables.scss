@@ -1,0 +1,24 @@
+// Fonts
+$mainFont: Montserrat !important;
+
+// Font Sizing
+$baseFontSize: 16px;
+$baseLineHeight: 1.5;
+$headingLineHeight: 1.2;
+
+// Colors
+$mainColor: #707070;
+$secColor: #6c63ff;
+$black: rgba(51, 51, 51, 1);
+$red: #d52b1e;
+$blue: #00a1de;
+
+// Spacing
+$pad: 1em;
+
+// ----------------------------------------------------------------------
+// Layout Breakpoints
+// ----------------------------------------------------------------------
+$maxMobile: "(max-width: 767px)";
+$minSmall: "(min-width: 768px)";
+$minMedium: "(min-width: 992px)";
